@@ -9,33 +9,25 @@
         android:id="@+id/list_image"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="12dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/list_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/list_image"
+        android:layout_below="@id/list_image"
+        android:layout_centerHorizontal="true"
         android:text="Title"
+        android:textAlignment="center"
         android:textColor="@color/colorAccentPurple"
-        android:textSize="28sp" />
-
-    <TextView
-        android:id="@+id/list_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/list_title"
-        android:layout_marginVertical="4dp"
-        android:layout_toRightOf="@id/list_image"
-        android:text="Description"
-        android:textColor="#000" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_image"
+        android:layout_below="@id/list_title"
+        android:layout_alignLeft="@id/list_image"
         android:layout_weight="1"
         android:text="Price: $"
         android:textAlignment="textEnd"
@@ -45,7 +37,7 @@
         android:id="@+id/list_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_image"
+        android:layout_below="@id/list_title"
         android:layout_toRightOf="@id/price"
         android:layout_weight="3"
         android:text="Price"
@@ -56,8 +48,8 @@
         android:id="@+id/in_stock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_image"
-        android:layout_toLeftOf="@id/list_available"
+        android:layout_below="@id/list_price"
+        android:layout_alignLeft="@id/list_image"
         android:layout_weight="1"
         android:text="In Stock: "
         android:textAlignment="textEnd"
@@ -67,8 +59,8 @@
         android:id="@+id/list_available"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/list_image"
-        android:layout_alignParentRight="true"
+        android:layout_below="@id/list_price"
+        android:layout_toRightOf="@id/in_stock"
         android:layout_weight="1"
         android:text="Available"
         android:textColor="@color/colorAccentBrown"

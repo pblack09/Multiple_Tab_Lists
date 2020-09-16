@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.multipletablists.R
-import com.example.multipletablists.adapters.AdapterFragment
-import com.example.multipletablists.adapters.AdapterItems
+import com.example.multipletablists.adapters.AdapterGadgets
 import com.example.multipletablists.data.Gadgets
 import kotlinx.android.synthetic.main.fragment_common.view.*
 
@@ -54,9 +54,10 @@ class CommonFragment : Fragment() {
 
         // Set the Fragment's <ListView> with the data
     private fun init(view: View){
-        var myAdapter = AdapterItems(view.context, mList)
+        var myAdapter = AdapterGadgets(view.context, mList)
 
-        view.list_view.adapter = myAdapter
+            view.recycler_view.layoutManager = GridLayoutManager(view.context, 2)
+        view.recycler_view.adapter = myAdapter
     }
 
         // Receive parameter from MainActivity
